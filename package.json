@@ -1,0 +1,22 @@
+{
+  "name": "zkSync",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@matterlabs/hardhat-zksync-deploy": "^0.6.3",
+    "@matterlabs/hardhat-zksync-solc": "^0.3.16",
+    "@opengsn/gsn": "^2.1.0",
+    "@openzeppelin/contracts": "^4.7.0",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.14.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4",
+    "zksync-web3": "^0.14.3"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.0",
+    "dotenv": "^16.0.1",
+    "web3.storage": "^4.0.0"
+  }
+}
