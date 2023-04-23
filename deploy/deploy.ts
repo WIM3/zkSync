@@ -23,7 +23,7 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   console.log(`...Estimating Fee`);
   // Estimate contract deployment fee
   //const greeting = "Hi there!";
-  const deploymentFee = await deployer.estimateDeployFee(artifact, [1000000000]);
+  const deploymentFee = await deployer.estimateDeployFee(artifact, []);
 
   console.log(`...Calling Deposithandler`);
   // OPTIONAL: Deposit funds to L2
@@ -31,7 +31,7 @@ export default async function (hre: HardhatRuntimeEnvironment) {
 
   console.log(`...Calling Deposithandler: deployer.zkWallet.address: ` + deployer.zkWallet.address);
   console.log(`...Calling Deposithandler: utils.ETH_ADDRESS: ` + utils.ETH_ADDRESS);
-
+  /*
   const depositHandle = await deployer.zkWallet.deposit({
     to: deployer.zkWallet.address,
     token: utils.ETH_ADDRESS,
@@ -39,14 +39,14 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   });
   // Wait until the deposit is processed on zkSync
   await depositHandle.wait();
-
+*/
   console.log(`...Calling Parsefee`);
   // Deploy this contract. The returned object will be of a `Contract` type, similarly to ones in `ethers`.
   // `greeting` is an argument for contract constructor.
   const parsedFee = ethers.utils.formatEther(deploymentFee.toString());
   console.log(`The deployment is estimated to cost ${parsedFee} ETH`);
 
-  const greeterContract = await deployer.deploy(artifact, []);
+  const greeterContract = await deployer.deploy(artifact);
 
   //obtain the Constructor Arguments
   console.log("constructor args:" + greeterContract.interface.encodeDeploy([]));

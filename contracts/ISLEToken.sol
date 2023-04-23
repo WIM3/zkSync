@@ -12,7 +12,7 @@ contract ISLEToken is ERC20 {
   uint256 private _totalSupply = 1000000000 * (10 ** uint256(_dec));
 
 
-    constructor(uint256 initialSupply) ERC20(_name, _symbol) {
+    constructor() ERC20(_name, _symbol) {
         _mint(msg.sender, _totalSupply);
     }
 }
