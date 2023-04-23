@@ -11,6 +11,7 @@ module.exports = {
     settings: {},
   },
   //defaultNetwork: "zkSyncTestnet",
+  defaultNetwork: "zkSyncMainnet",
 
   networks: {
     zkSyncTestnet: {
@@ -23,7 +24,7 @@ module.exports = {
     },
     zkSyncMainnet: {
       url: "https://mainnet.era.zksync.io",
-      ethNetwork: "https://goerli.infura.io/" + process.env.ETHERSCAN_API_KEY || "",
+      ethNetwork: "https://mainnet.infura.io/v3/" + process.env.ETHERSCAN_API_KEY || "",
       accounts: [process.env.PRIVATE_KEY],
       gasPrice: 0,
       zksync: true,
