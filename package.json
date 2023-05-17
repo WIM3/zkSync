@@ -6,8 +6,10 @@
   "devDependencies": {
     "@matterlabs/hardhat-zksync-deploy": "^0.6.3",
     "@matterlabs/hardhat-zksync-solc": "^0.3.16",
-    "@opengsn/gsn": "^2.1.0",
-    "@openzeppelin/contracts": "^4.7.0",
+    "@matterlabs/hardhat-zksync-verify": "^0.1.7",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@opengsn/gsn": "^0.9.0",
+    "@openzeppelin/contracts": "^4.8.3",
     "ethers": "^5.7.2",
     "hardhat": "^2.14.0",
     "ts-node": "^10.9.1",
@@ -15,8 +17,13 @@
     "zksync-web3": "^0.14.3"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.7.0",
-    "dotenv": "^16.0.1",
+    "@fast-csv/parse": "^4.3.6",
+    "@matterlabs/hardhat-zksync-verify": "^0.1.7",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@truffle/hdwallet-provider": "^1.0.34",
+    "dotenv": "^16.0.3",
+    "truffle-plugin-verify": "^0.6.1",
+    "web3": "^1.2.6",
     "web3.storage": "^4.0.0"
   }
 }

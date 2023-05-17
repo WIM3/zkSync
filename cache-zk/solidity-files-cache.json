@@ -1,12 +1,12 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "C:\\DEV\\zkSync\\contracts\\Greeter.sol": {
-      "lastModificationDate": 1681922445755,
-      "contentHash": "421d1bb49b1543b472ec5dd487ce105f",
-      "sourceName": "contracts/Greeter.sol",
+    "C:\\DEV\\zkSync\\contracts\\Airdrop.sol": {
+      "lastModificationDate": 1684322635665,
+      "contentHash": "e1c28f66069057546a9e1ff494e67cec",
+      "sourceName": "contracts/Airdrop.sol",
       "solcConfig": {
-        "version": "0.8.8",
+        "version": "0.8.10",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -26,7 +26,7 @@
           }
         },
         "zksolc": {
-          "version": "1.3.8",
+          "version": "1.3.7",
           "compilerSource": "binary",
           "settings": {
             "optimizer": {
@@ -38,20 +38,24 @@
           }
         }
       },
-      "imports": [],
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/utils/math/SafeMath.sol",
+        "./ISLEToken.sol"
+      ],
       "versionPragmas": [
-        ">=0.5.0 <0.9.0"
+        "^0.8.10"
       ],
       "artifacts": [
-        "Greeter"
+        "Airdrop"
       ]
     },
     "C:\\DEV\\zkSync\\contracts\\ISLEToken.sol": {
-      "lastModificationDate": 1682240331302,
-      "contentHash": "9b656eb7caa44fbc5cd07281c7f5977b",
+      "lastModificationDate": 1684322802737,
+      "contentHash": "a204dd74e89610fae325df40395e031b",
       "sourceName": "contracts/ISLEToken.sol",
       "solcConfig": {
-        "version": "0.8.8",
+        "version": "0.8.10",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -71,7 +75,7 @@
           }
         },
         "zksolc": {
-          "version": "1.3.8",
+          "version": "1.3.7",
           "compilerSource": "binary",
           "settings": {
             "optimizer": {
@@ -87,18 +91,18 @@
         "@openzeppelin/contracts/token/ERC20/ERC20.sol"
       ],
       "versionPragmas": [
-        "^0.8.8"
+        "^0.8.10"
       ],
       "artifacts": [
         "ISLEToken"
       ]
     },
-    "C:\\DEV\\zkSync\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\ERC20.sol": {
-      "lastModificationDate": 1682241461082,
-      "contentHash": "834a0dde221759af42b030253315b086",
-      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+    "C:\\DEV\\zkSync\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
+      "lastModificationDate": 1684322698945,
+      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
-        "version": "0.8.8",
+        "version": "0.8.10",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -118,7 +122,99 @@
           }
         },
         "zksolc": {
-          "version": "1.3.8",
+          "version": "1.3.7",
+          "compilerSource": "binary",
+          "settings": {
+            "optimizer": {
+              "enabled": true,
+              "mode": "3"
+            },
+            "compilerPath": "",
+            "experimental": {}
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "C:\\DEV\\zkSync\\node_modules\\@openzeppelin\\contracts\\utils\\math\\SafeMath.sol": {
+      "lastModificationDate": 1684322698952,
+      "contentHash": "2337f0279507b5edf14a07067adf0d05",
+      "sourceName": "@openzeppelin/contracts/utils/math/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.8.10",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "mode": "3"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.3.7",
+          "compilerSource": "binary",
+          "settings": {
+            "optimizer": {
+              "enabled": true,
+              "mode": "3"
+            },
+            "compilerPath": "",
+            "experimental": {}
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "C:\\DEV\\zkSync\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\ERC20.sol": {
+      "lastModificationDate": 1684322698840,
+      "contentHash": "834a0dde221759af42b030253315b086",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.10",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "mode": "3"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.3.7",
           "compilerSource": "binary",
           "settings": {
             "optimizer": {
@@ -143,11 +239,11 @@
       ]
     },
     "C:\\DEV\\zkSync\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
-      "lastModificationDate": 1682241461037,
+      "lastModificationDate": 1684322698799,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
-        "version": "0.8.8",
+        "version": "0.8.10",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -167,7 +263,7 @@
           }
         },
         "zksolc": {
-          "version": "1.3.8",
+          "version": "1.3.7",
           "compilerSource": "binary",
           "settings": {
             "optimizer": {
@@ -188,11 +284,11 @@
       ]
     },
     "C:\\DEV\\zkSync\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {
-      "lastModificationDate": 1682241461195,
+      "lastModificationDate": 1684322698908,
       "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
       "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
-        "version": "0.8.8",
+        "version": "0.8.10",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -212,7 +308,7 @@
           }
         },
         "zksolc": {
-          "version": "1.3.8",
+          "version": "1.3.7",
           "compilerSource": "binary",
           "settings": {
             "optimizer": {
@@ -233,11 +329,11 @@
       ]
     },
     "C:\\DEV\\zkSync\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\IERC20Metadata.sol": {
-      "lastModificationDate": 1682241461198,
+      "lastModificationDate": 1684322698909,
       "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
       "solcConfig": {
-        "version": "0.8.8",
+        "version": "0.8.10",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -257,7 +353,7 @@
           }
         },
         "zksolc": {
-          "version": "1.3.8",
+          "version": "1.3.7",
           "compilerSource": "binary",
           "settings": {
             "optimizer": {

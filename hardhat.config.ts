@@ -6,31 +6,32 @@ require("dotenv").config();
 
 module.exports = {
   zksolc: {
-    version: "1.3.8",
+    version: "1.3.7",
     compilerSource: "binary",
     settings: {},
   },
-  //defaultNetwork: "zkSyncTestnet",
-  defaultNetwork: "zkSyncMainnet",
+  solidity: {
+    version: "0.8.10",
+  },
+
+  //defaultNetwork: "zkMain",
+  defaultNetwork: "zkTest",
 
   networks: {
-    zkSyncTestnet: {
+    zkTest: {
       url: "https://testnet.era.zksync.dev",
       ethNetwork: "https://goerli.infura.io/" + process.env.ETHERSCAN_API_KEY || "",
       accounts: [process.env.PRIVATE_KEY],
       zksync: true,
-      verifyURL: "https://explorer.zksync.io/",
+      verifyURL: "https://zksync2-testnet-explorer.zksync.dev/contract_verification",
       gasPrice: 0,
     },
-    zkSyncMainnet: {
+    zkMain: {
       url: "https://mainnet.era.zksync.io",
       ethNetwork: "https://mainnet.infura.io/v3/" + process.env.ETHERSCAN_API_KEY || "",
       accounts: [process.env.PRIVATE_KEY],
-      gasPrice: 0,
       zksync: true,
+      verifyURL: "https://zksync2-mainnet-explorer.zksync.io/contract_verification",
     },
-  },
-  solidity: {
-    version: "0.8.8",
   },
 };
