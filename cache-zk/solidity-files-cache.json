@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\DEV\\zkSync\\contracts\\Airdrop.sol": {
-      "lastModificationDate": 1684322635665,
-      "contentHash": "e1c28f66069057546a9e1ff494e67cec",
+      "lastModificationDate": 1684832598583,
+      "contentHash": "83d7fe0a22f329c9e201156c3227baff",
       "sourceName": "contracts/Airdrop.sol",
       "solcConfig": {
         "version": "0.8.10",

@@ -1,6 +1,7 @@
 import "@matterlabs/hardhat-zksync-deploy";
 import "@matterlabs/hardhat-zksync-solc";
 import "@matterlabs/hardhat-zksync-verify";
+import "@nomiclabs/hardhat-ethers";
 
 require("dotenv").config();
 
@@ -24,7 +25,8 @@ module.exports = {
       accounts: [process.env.PRIVATE_KEY],
       zksync: true,
       verifyURL: "https://zksync2-testnet-explorer.zksync.dev/contract_verification",
-      gasPrice: 0,
+      gas: 2100000,
+      gasPrice: 8000000000,
     },
     zkMain: {
       url: "https://mainnet.era.zksync.io",
