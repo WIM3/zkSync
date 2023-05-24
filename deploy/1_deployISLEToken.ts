@@ -13,7 +13,7 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   // Initialize the wallet.  <WALLET-PRIVATE-KEY>
   const wallet = new Wallet(process.env.PRIVATE_KEY as any);
 
-  console.log(`...Calling Deployer`);
+  console.log(`...Calling Deployer for ISLE token`);
 
   // Create deployer object and load the artifact of the contract you want to deploy.
   const deployer = new Deployer(hre, wallet);

@@ -13,13 +13,19 @@ contract Airdrop is Ownable {
 
   event EtherTransfer(address beneficiary, uint amount);
 
-  constructor(address _tokenAddr) {
+  constructor() /*address _tokenAddr*/ {
+    //tokenAddr = _tokenAddr;
+    //owner = payable(msg.sender);
+  }
+
+  function setTokenAddress(address _tokenAddr) public onlyOwner returns (bool) {
     tokenAddr = _tokenAddr;
+    return true;
   }
 
   function dropTokens(
-    address[] memory _recipients,
-    uint256[] memory _amount
+    address[] calldata _recipients,
+    uint256[] calldata _amount
   ) public onlyOwner returns (bool) {
     for (uint i = 0; i < _recipients.length; i++) {
       require(_recipients[i] != address(0));
@@ -30,8 +36,8 @@ contract Airdrop is Ownable {
   }
 
   function dropEther(
-    address[] memory _recipients,
-    uint256[] memory _amount
+    address[] calldata _recipients,
+    uint256[] calldata _amount
   ) public payable onlyOwner returns (bool) {
     uint total = 0;
 
