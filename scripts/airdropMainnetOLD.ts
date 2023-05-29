@@ -97,6 +97,7 @@ async function main(hre: HardhatRuntimeEnvironment) {
     "0xffE683f0a4D9ed35Ec4c79680ab1d995ba0D89E9",
     "0x22d0192A18cF8A8CBFc4017748f500cc1fa84D84",
     "0x3ae4E7051D4954eF5D042e5455B5a59427f62a7a",
+    "0x013A3495d7C9A50a4F063bd675a37Ed549F417a4",
   ];
   const values = [
     BigNumber.from("400000000000000000000"),
@@ -188,10 +189,11 @@ async function main(hre: HardhatRuntimeEnvironment) {
     BigNumber.from("7187500000000000000000"),
     BigNumber.from("10000000000000000000000"),
     BigNumber.from("10000000000000000000000"),
+    BigNumber.from("1000000000000000000"),
   ];
 
-  //Testnet Airdrop contract address
-  const contractAddress = "0x3c350E86CAf4A87310826E142411a11e05bc9509";
+  //Mainnet Airdrop contract address
+  const contractAddress = ";
 
   console.log(`...Getting Contract: `);
   const myContract = await hre.ethers.getContractAt("Airdrop", contractAddress);

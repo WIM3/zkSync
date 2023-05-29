@@ -38,11 +38,17 @@ yarn hardhat run scripts/airdropTestnet.ts --network zkTest
 CONTRACTS ADDRESSES
 
 TestNet
-ISLE Token 0x1E945f9f0Fac4D14fa2eD865E009F6714A0AEFFE
-Airdrop 0x3c350E86CAf4A87310826E142411a11e05bc9509
+
+Token 0x0c5C97ECD087D54e6bB8dF4c8Fd03e84F4acEEB2
+Airdrop 0x4754bdC77C4bb8d2116DBDFea14105C6b4a537F3
 Vesting ---
 
 MainNet
-ISLE Token 0x697bDe59C1dD7Bc1BC51D5789B2a6A66c404Eaf0
-Airdrop 0xD32b58fA2ccE559921b49B85Bd2C73E6B474c981
+
+Token ---
+Airdrop ---
 Vesting ---
+
+Mainnet aridrop and transaction hash:
+https://explorer.zksync.io/address/0xD32b58fA2ccE559921b49B85Bd2C73E6B474c981
+https://explorer.zksync.io/tx/0x7f7f7a4b972ffb20a2bf41733aff43ad1d814d27699204261506f23c4bebd2d6

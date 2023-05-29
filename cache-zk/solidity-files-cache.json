@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\DEV\\zkSync\\contracts\\Airdrop.sol": {
-      "lastModificationDate": 1684832598583,
-      "contentHash": "83d7fe0a22f329c9e201156c3227baff",
+      "lastModificationDate": 1685384030621,
+      "contentHash": "d7db67576b30d7b60a249e3eca02c652",
       "sourceName": "contracts/Airdrop.sol",
       "solcConfig": {
         "version": "0.8.10",
@@ -41,7 +41,7 @@
       "imports": [
         "@openzeppelin/contracts/access/Ownable.sol",
         "@openzeppelin/contracts/utils/math/SafeMath.sol",
-        "./ISLEToken.sol"
+        "./Token.sol"
       ],
       "versionPragmas": [
         "^0.8.10"
@@ -50,10 +50,10 @@
         "Airdrop"
       ]
     },
-    "C:\\DEV\\zkSync\\contracts\\ISLEToken.sol": {
-      "lastModificationDate": 1684322802737,
-      "contentHash": "a204dd74e89610fae325df40395e031b",
-      "sourceName": "contracts/ISLEToken.sol",
+    "C:\\DEV\\zkSync\\contracts\\Token.sol": {
+      "lastModificationDate": 1685373006653,
+      "contentHash": "d3afbe55ef87e53fb2535e4a7ad9b967",
+      "sourceName": "contracts/Token.sol",
       "solcConfig": {
         "version": "0.8.10",
         "settings": {
@@ -94,7 +94,7 @@
         "^0.8.10"
       ],
       "artifacts": [
-        "ISLEToken"
+        "Token"
       ]
     },
     "C:\\DEV\\zkSync\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
