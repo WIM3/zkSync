@@ -24,4 +24,8 @@ export default async function (hre: HardhatRuntimeEnvironment) {
 
   console.log(`Deployed contract address: ` + airdropContract.address);
   console.log(`${airdrop.contractName} was deployed to ${airdropContract.address}`);
+
+  await hre.run("verify:verify", {
+    address: airdropContract.address,
+  });
 }

@@ -5,29 +5,29 @@ import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { Deployer } from "@matterlabs/hardhat-zksync-deploy";
 
 export default async function (hre: HardhatRuntimeEnvironment) {
-  console.log(`Running deploy script for the Token contract with KEY: ` + process.env.PRIVATE_KEY);
+  const name = "GALL v1.0";
+  const symbol = "GALL";
 
   const wallet = new Wallet(process.env.PRIVATE_KEY as any);
-
-  console.log(`...Calling Deployer for token`);
+  console.log(`...Initialized Wallet`);
 
   const deployer = new Deployer(hre, wallet);
   const artifact = await deployer.loadArtifact("Token");
+  console.log(`...Calling Deployer & Artifact for token`);
 
-  console.log(`...Estimating Fee`);
-
-  const deploymentFee = await deployer.estimateDeployFee(artifact, []);
-
-  console.log(`...Calling Deposithandler: deployer.zkWallet.address: ` + deployer.zkWallet.address);
-  console.log(`...Calling Deposithandler: utils.ETH_ADDRESS: ` + utils.ETH_ADDRESS);
+  const deploymentFee = await deployer.estimateDeployFee(artifact, [name, symbol]);
+  console.log(`...Estimated Fee`);
 
   const parsedFee = ethers.utils.formatEther(deploymentFee.toString());
-  console.log(`The deployment is estimated to cost ${parsedFee} ETH`);
+  console.log(`...Estimated cost of deployment: ${parsedFee} ETH`);
 
-  const tokenContract = await deployer.deploy(artifact);
+  const tokenContract = await deployer.deploy(artifact, [name, symbol]);
+  console.log(`...Deployed contract`);
 
-  console.log("constructor args:" + tokenContract.interface.encodeDeploy([]));
+  console.log(`${artifact.contractName} was deployed to ${tokenContract.address}`);
 
-  const contractAddress = tokenContract.address;
-  console.log(`${artifact.contractName} was deployed to ${contractAddress}`);
+  await hre.run("verify:verify", {
+    address: tokenContract.address,
+    constructorArguments: [name, symbol],
+  });
 }

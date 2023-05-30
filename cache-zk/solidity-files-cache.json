@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\DEV\\zkSync\\contracts\\Airdrop.sol": {
-      "lastModificationDate": 1685384030621,
-      "contentHash": "d7db67576b30d7b60a249e3eca02c652",
+      "lastModificationDate": 1685434510745,
+      "contentHash": "e726278feb639245a2657df8bbb4c006",
       "sourceName": "contracts/Airdrop.sol",
       "solcConfig": {
         "version": "0.8.10",
@@ -51,8 +51,8 @@
       ]
     },
     "C:\\DEV\\zkSync\\contracts\\Token.sol": {
-      "lastModificationDate": 1685373006653,
-      "contentHash": "d3afbe55ef87e53fb2535e4a7ad9b967",
+      "lastModificationDate": 1685436823819,
+      "contentHash": "55cd6c828343208091898d8b31cddf49",
       "sourceName": "contracts/Token.sol",
       "solcConfig": {
         "version": "0.8.10",

@@ -39,14 +39,14 @@ CONTRACTS ADDRESSES
 
 TestNet
 
-Token 0x0c5C97ECD087D54e6bB8dF4c8Fd03e84F4acEEB2
-Airdrop 0x4754bdC77C4bb8d2116DBDFea14105C6b4a537F3
+Token 0xcbd3161f5C8e39b5d0F800Dd991834F518B1c0fD
+Airdrop 0xfcdF31e9C2fea705fc32304ed4908452C1fCaA8F
 Vesting ---
 
 MainNet
 
-Token ---
-Airdrop ---
+Token 0x7b6FA726CD564f6fEaF29F614d55a3B5dF416B7d
+Airdrop 0x505b36401D34820f1cEFb0a278209B305d5b969C
 Vesting ---
 
 Mainnet aridrop and transaction hash:

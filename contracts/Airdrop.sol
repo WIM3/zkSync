@@ -24,10 +24,14 @@ contract Airdrop is Ownable {
     address[] calldata _recipients,
     uint256[] calldata _amount
   ) public onlyOwner returns (bool) {
-    require(_recipients.length == _amount.length);
+    require(
+      _recipients.length == _amount.length,
+      "Lenght mismatch between _recipients[] and _amount[]"
+    );
     for (uint256 i = 0; i < _recipients.length; i++) {
-      require(_recipients[i] != address(0));
-      require(Token(tokenAddr).transfer(_recipients[i], _amount[i]));
+      require(_recipients[i] != address(0), "Invalid recipient address: ${_recipients[i]}");
+      bool success = Token(tokenAddr).transfer(_recipients[i], _amount[i]);
+      require(success, "Transfer failed for recipient: ${_recipients[i]} and amount ${_amount[i]}");
     }
 
     return true;

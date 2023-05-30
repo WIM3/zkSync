@@ -6,13 +6,8 @@ const { BigNumber } = require("@ethersproject/bignumber");
 import { Wallet, utils } from "zksync-web3";
 
 async function main(hre: HardhatRuntimeEnvironment) {
-  // Define the contract name and address
-  const contractName = "Airdrop";
-  const contractAddress = "0x4754bdC77C4bb8d2116DBDFea14105C6b4a537F3"; //Testnet Airdrop contract address
-
-  //const token = await deployer.loadArtifact("Token");
-  //const tokenAddress = "---"; // MAINNET
-  const tokenAddress = "0x0c5C97ECD087D54e6bB8dF4c8Fd03e84F4acEEB2"; // TESTNET
+  const airdropAddress = "0x505b36401D34820f1cEFb0a278209B305d5b969C"; // AIRDROP TESTNET
+  const tokenAddress = "0x7b6FA726CD564f6fEaF29F614d55a3B5dF416B7d"; // TOKEN TESTNET
 
   // Define the CSV file name and format
   const csvFileName = "./airdrop/testnet.csv"; // Replace with the actual file name
@@ -39,17 +34,19 @@ async function main(hre: HardhatRuntimeEnvironment) {
       const [deployer] = await hre.ethers.getSigners();
       // Load the Airdrop contract instance
       const airdropArtifact = await hre.artifacts.readArtifact("Airdrop");
-      const airdrop = new hre.ethers.Contract(contractAddress, airdropArtifact.abi, deployer);
+      const airdrop = new hre.ethers.Contract(airdropAddress, airdropArtifact.abi, deployer);
 
       // Get a contract instance using HRE
       //const contract = await hre.ethers.getContractAt(contractName, contractAddress);
-      console.log(`...Got Contract: ` + airdrop.address);
-      console.log(`...Got Balance: ` + airdrop.balance);
+      console.log(`...Got Airdrop Contract: ` + airdrop.address);
+      //console.log(`...Got Airdrop Tooken Balance: ` + airdrop.balanceOf(tokenAddress));
+      //console.log(`...Got Airdrop  ETH   Balance: ` + airdrop.balance);
+      console.log(`...Got Token Contract: ` + tokenAddress);
 
       // Call the dropTokens function with the arrays
       try {
-        let gasEstimate = await airdrop.estimateGas.dropTokens(recipients, amounts);
-        console.log(">>>> Gas estimate:", gasEstimate.toString());
+        //let gasEstimate = await airdrop.estimateGas.dropTokens(recipients, amounts);
+        //console.log(">>>> Gas estimate:", gasEstimate.toString());
         const feeData = await hre.ethers.provider.getFeeData();
         console.log("feeData:", feeData);
         let tk = await airdrop.setTokenAddress(tokenAddress);
