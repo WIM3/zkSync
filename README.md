@@ -3,6 +3,35 @@
 This project repo contains the files to
 compile, deploy, and verify the toke on both testnet and mainnet on zkSync.
 
+---
+
+CONTRACTS ADDRESSES
+
+TESTNET:
+
+Token 0xcbd3161f5C8e39b5d0F800Dd991834F518B1c0fD
+Airdrop 0xfcdF31e9C2fea705fc32304ed4908452C1fCaA8F
+Vesting ---
+Staking ---
+TokenSale ---
+NFTSale ---
+
+MAINNET:
+
+Token 0x7b6FA726CD564f6fEaF29F614d55a3B5dF416B7d
+Airdrop 0x505b36401D34820f1cEFb0a278209B305d5b969C
+Vesting ---
+Staking ---
+TokenSale ---
+NFTSale ---
+
+---
+
+Token - to mint the ERC20 token
+Airdrop - to Airdrop tokens to a list of "recipient addresses + amount" pairs externalized to a CVS file.
+
+USEFUL COMMANDS
+
 Testnet:
 yarn hardhat compile
 
@@ -34,21 +63,3 @@ other example commands:
 npx hardhat run scripts/deploy.js --network ropsten
 
 yarn hardhat run scripts/airdropTestnet.ts --network zkTest
-
-CONTRACTS ADDRESSES
-
-TestNet
-
-Token 0xcbd3161f5C8e39b5d0F800Dd991834F518B1c0fD
-Airdrop 0xfcdF31e9C2fea705fc32304ed4908452C1fCaA8F
-Vesting ---
-
-MainNet
-
-Token 0x7b6FA726CD564f6fEaF29F614d55a3B5dF416B7d
-Airdrop 0x505b36401D34820f1cEFb0a278209B305d5b969C
-Vesting ---
-
-Mainnet aridrop and transaction hash:
-https://explorer.zksync.io/address/0xD32b58fA2ccE559921b49B85Bd2C73E6B474c981
-https://explorer.zksync.io/tx/0x7f7f7a4b972ffb20a2bf41733aff43ad1d814d27699204261506f23c4bebd2d6
